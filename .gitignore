@@ -1,0 +1,6 @@
+.gemini/
+.DS_Store
+scratch/
+*.log
+node_modules/
+.env
