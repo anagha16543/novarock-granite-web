@@ -30,7 +30,11 @@ function __($key) {
     return $langs[$lang][$key] ?? $key;
 }
 // Fetch Global site Settings
-$site = $pdo->query("SELECT * FROM site_settings WHERE id = 1")->fetch();
+try {
+    $site = $pdo->query("SELECT * FROM site_settings WHERE id = 1")->fetch();
+} catch (Exception $e) {
+    $site = null;
+}
 if (!$site) {
     $site = (object)[
         'site_title' => 'Novarock International',

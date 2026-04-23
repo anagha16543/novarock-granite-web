@@ -142,4 +142,26 @@ CREATE TABLE `calculator_settings` (
 
 INSERT INTO `calculator_settings` (`id`) VALUES (1);
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `site_settings`
+--
+
+CREATE TABLE `site_settings` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `site_title` varchar(255) NOT NULL DEFAULT 'Novarock International',
+  `site_description` text DEFAULT 'Premium Stone Export & Manufacturing',
+  `meta_keywords` varchar(500) DEFAULT 'granite, marble, stone export, Indian granite, Italian marble',
+  `contact_email` varchar(255) DEFAULT NULL,
+  `contact_phone` varchar(50) DEFAULT NULL,
+  `address` text DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+INSERT INTO `site_settings` (`id`, `site_title`, `site_description`, `meta_keywords`)
+VALUES (1, 'Novarock International', 'Premium Stone Export & Manufacturing', 'granite, marble, stone export, Indian granite, Italian marble, Novarock');
+
+-- --------------------------------------------------------
+
 COMMIT;
